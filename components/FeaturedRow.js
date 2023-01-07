@@ -1,6 +1,6 @@
 import { View, Text, ScrollView } from "react-native";
 import React, { useEffect, useState } from "react";
-import { ArrowRightIcon } from "react-native-heroicons/outline";
+import { ArrowRightIcon } from "react-native-heroicons/solid";
 import RestaurantCard from "./RestaurantCard";
 import sanityClient from "../sanity";
 

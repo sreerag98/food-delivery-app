@@ -34,7 +34,7 @@ const RestaurantCard = ({
           lat,
         });
       }}
-      className="bg-white mr-3 shadow "
+      className="bg-white mr-3 shadow-lg rounded-md"
     >
       <Image
         source={{

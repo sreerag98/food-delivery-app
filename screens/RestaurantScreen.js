@@ -94,28 +94,39 @@ const RestaurantScreen = () => {
             <Text className="text-gray-500 mt-2 pb-4">{short_description}</Text>
           </View>
 
-          <TouchableOpacity className="flex-row items-center space-x-2 p-4 border-y border-gray-300">
-            <QuestionMarkCircleIcon color="gray" opacity={0.6} size={20} />
-            <Text className="pl-2 flex-1 text-md font-bold">
-              Have a food alergy?
+          <TouchableOpacity className="flex-row items-center space-x-2 p-3 border-y border-gray-300">
+            <QuestionMarkCircleIcon color="gray" opacity={0.7} size={20} />
+            <Text className="pl-2 pb-1 flex-1 items-center text-md font-bold">
+              Have a Query?
             </Text>
             <ChevronRightIcon color="#00CCBB" />
           </TouchableOpacity>
         </View>
 
-        <View className=" ">
-          <Text className="px-4 pt-6 mb-3 font-bold text-xl">Menu</Text>
-
-          {dishes.map((dish) => (
-            <DishRow
-              key={dish._id}
-              id={dish._id}
-              name={dish.name}
-              description={dish.short_description}
-              price={dish.price}
-              image={dish.image}
-            />
-          ))}
+        <View className="">
+          <Text className="px-4 pt-6 mb-3 font-bold text-xl">Items</Text>
+          <ScrollView className="p-3 gap-1">
+            {dishes?.map((dish) => (
+              <DishRow
+                key={dish._id}
+                id={dish._id}
+                name={dish.name}
+                description={dish.short_description}
+                price={dish.price}
+                image={dish.image}
+              />
+            ))}
+              {dishes?.map((dish) => (
+              <DishRow
+                key={dish._id}
+                id={dish._id}
+                name={dish.name}
+                description={dish.short_description}
+                price={dish.price}
+                image={dish.image}
+              />
+            ))}
+          </ScrollView>
         </View>
       </ScrollView>
     </>
